@@ -8,8 +8,14 @@ fetch(url)
 const input = document.querySelector(".input-field"); //to access user input
 const result = document.querySelector(".suggestion"); //to access suggestions dropdown
 
-input.addEventListener("keyup",handleInput); //detect user input
-input.addEventListener("change",handleInput); //detect user input
+input.addEventListener("keyup",showResults); //detect user input
+input.addEventListener("change",showResults); //detect user input
 
-
+function findResults(stringToCheck,cities){
+    return cities.filter(place =>{
+        const regex1 = new RegExp(stringToCheck,'gi');
+        return place.name.match(regex1) || place.state.match(regex1);
+    })
+}
+function showResults(){}
 
