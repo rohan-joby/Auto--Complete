@@ -6,16 +6,28 @@
 }
 
 :root {
-  --clr-primary-100: hsl(110, 100%, 90%);
-  --clr-primary-900: hsla(108, 100%, 13%, 0.781);
+  --clr-primary-100: hsl(252, 95%, 85%);
+  --clr-primary-200: hsl(251, 91%, 95%);
+  --clr-primary-300: hsl(252, 95%, 80%);
+
+  --clr-primary-900: hsla(263, 70%, 50%, 0.664);
   --clr-accent-500: hsla(0, 100%, 7%, 0.534);
   --clr-accent-900: hsl(0, 100%, 7%);
-  --clr-hl-900: hsla(192, 100%, 55%, 0.781);
+  --clr-hl-900:hsl(263, 69%, 42%);
 }
 
 body {
-  background-color: var(--clr-primary-900);
+    background: var(--clr-primary-900);
+    max-height: 100vh;
 }
+
+.heading{
+    font-size:3rem;
+    color:var(--clr-primary-200);
+    text-align: center;
+    margin:2rem auto;
+}
+
 .input {
   text-align: center;
 }
@@ -38,7 +50,7 @@ input[type="text"]:focus {
   transform: scale(1.05);
   transition: transform 0.25s ease-in-out;
   outline-style: none;
-  box-shadow: 0 0 8px 2px var(--clr-primary-100);
+  box-shadow: 0 0 8px 5px var(--clr-primary-100);
   border: none;
 }
 
@@ -54,7 +66,7 @@ input[type="text"]:focus {
   height: 9%;
   font-size: 1.2rem;
   color: var(--clr-accent-500);
-  background-color: var(--clr-primary-100);
+  background-color: var(--clr-primary-300);
   border: 1px solid var(--clr-primary-100);
   list-style: none;
   line-height: 2;
