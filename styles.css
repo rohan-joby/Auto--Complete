@@ -13,19 +13,19 @@
   --clr-primary-900: hsla(263, 70%, 50%, 0.664);
   --clr-accent-500: hsla(0, 100%, 7%, 0.534);
   --clr-accent-900: hsl(0, 100%, 7%);
-  --clr-hl-900:hsl(263, 69%, 42%);
+  --clr-hl-900: hsl(263, 69%, 42%);
 }
 
 body {
-    background: var(--clr-primary-900);
-    max-height: 100vh;
+  background: var(--clr-primary-900);
+  max-height: 100vh;
 }
 
-.heading{
-    font-size:3rem;
-    color:var(--clr-primary-200);
-    text-align: center;
-    margin:2rem auto;
+.heading {
+  font-size: 3rem;
+  color: var(--clr-primary-200);
+  text-align: center;
+  margin: 2rem auto;
 }
 
 .input {
@@ -77,7 +77,23 @@ input[type="text"]:focus {
   color: var(--clr-accent-900);
 }
 
-.highlight{
-    background-color: var(--clr-primary-900);
-    color: var(--clr-primary-100);
+.highlight {
+  background-color: var(--clr-primary-900);
+  color: var(--clr-primary-100);
+}
+
+@media only screen and (max-width: 570px) {
+  input[type="text"] {
+    font-size: 1.2rem;
+    /*height: 3rem;*/
+    width: 80%;
+    margin: 5rem auto 0.5rem;
+    padding: 1rem;
+  }
+
+  .suggestion-item {
+    width: 15rem;
+    height: 9%;
+    font-size: 1.15rem;
+  }
 }
