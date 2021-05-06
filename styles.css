@@ -8,7 +8,8 @@
 :root {
   --clr-primary-100: hsl(110, 100%, 90%);
   --clr-primary-900: hsla(108, 100%, 13%, 0.781);
-  --clr-accent-900: hsla(0, 100%, 7%, 0.534);
+  --clr-accent-500: hsla(0, 100%, 7%, 0.534);
+  --clr-accent-900: hsl(0, 100%, 7%);
 }
 
 body {
@@ -21,14 +22,14 @@ body {
 input[type="text"] {
   display: block;
   font-size: 1.3rem;
-  height: 3rem;
-  width: 35rem;
-  margin: 5rem auto 1rem;
-  padding: 0 1rem;
+  /*height: 3rem;*/
+  width: 43%;
+  margin: 5rem auto 0.5rem;
+  padding: 1rem;
 }
 
 input[type="text"]::placeholder {
-  color: var(--clr-accent-900);
+  color: var(--clr-accent-500);
 }
 
 input[type="text"]:hover,
@@ -49,9 +50,16 @@ input[type="text"]:focus {
 
 .suggestion-item {
   width: 25rem;
-  height: 3rem;
+  height: 9%;
   font-size: 1.2rem;
-  color: var(--clr-primary-100);
+  color: var(--clr-accent-500);
+  background-color: var(--clr-primary-100);
   border: 1px solid var(--clr-primary-100);
   list-style: none;
+  line-height: 2;
+}
+
+/*** styling for suggestions drop down ***/
+.solutions {
+  color: var(--clr-accent-900);
 }
