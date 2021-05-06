@@ -1,24 +1,15 @@
-const cities=[];
-const url="cities.json";
+const cities=[]; //to store city details
+const url="cities.json"; //url of json containing data
 
 fetch(url)
     .then(data => data.json())
-    .then(value => cities=[...value]);
+    .then(value => cities=[...value]); //to store city details from json in "cities" array
 
-function findSimilar(toCheck,cities){
-  
-}
+const input = document.querySelector(".input-field"); //to access user input
+const result = document.querySelector(".suggestion"); //to access suggestions dropdown
 
-const input = document.querySelector(".input-field");
-const result = document.querySelector(".suggestion");
+input.addEventListener("keyup",handleInput); //detect user input
+input.addEventListener("change",handleInput); //detect user input
 
-input.addEventListener("keyup",handleInput);
-input.addEventListener("change",handleInput);
 
-function handleInput(){
-    const toCompare= this.value;
-    result.innerHTML= `<ul class="suggestion">
-    <li class="suggestion-item solutions">sdfghjkjhg</li>
-    </ul>`
-}
-    
+
