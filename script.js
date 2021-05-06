@@ -31,5 +31,11 @@ function showResults() {
     return `<ul class="suggestion"><li class="suggestion-item">${city}, ${state}</li></ul>`;
   });
   const stringText = html.join(" ");
-  result.innerHTML = stringText;
+
+  if(input.value != input.defaultValue){
+    result.innerHTML = stringText;
+  }
+  else{
+    result.innerHTML = "";
+  }
 }
