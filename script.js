@@ -23,7 +23,12 @@ function showResults() {
   //to display result of search
   const placesFound = findResults(this.value, cities);
   const html = placesFound.map((place) => {
-    return `<ul class="suggestion"><li class="suggestion-item">${place.name}, ${place.state}</li></ul>`;
+    const regex = new RegExp(this.value, "gi");
+    const city = place.name.replace(regex,`<span class="highlight">${this.value}</span>`
+    );
+    const state = place.state.replace(regex,`<span class="highlight">${this.value}</span>`
+    );
+    return `<ul class="suggestion"><li class="suggestion-item">${city}, ${state}</li></ul>`;
   });
   const stringText = html.join(" ");
   result.innerHTML = stringText;

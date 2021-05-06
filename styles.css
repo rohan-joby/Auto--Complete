@@ -10,6 +10,7 @@
   --clr-primary-900: hsla(108, 100%, 13%, 0.781);
   --clr-accent-500: hsla(0, 100%, 7%, 0.534);
   --clr-accent-900: hsl(0, 100%, 7%);
+  --clr-hl-900: hsla(192, 100%, 55%, 0.781);
 }
 
 body {
@@ -62,4 +63,9 @@ input[type="text"]:focus {
 /*** styling for suggestions drop down ***/
 .solutions {
   color: var(--clr-accent-900);
+}
+
+.highlight{
+    background-color: var(--clr-primary-900);
+    color: var(--clr-primary-100);
 }
