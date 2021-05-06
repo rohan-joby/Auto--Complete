@@ -36,6 +36,8 @@ function showResults() {
     result.innerHTML = stringText;
   }
   else{
-    result.innerHTML = "";
+    result.innerHTML = `<ul class="suggestion">
+    <li class="suggestion-item">Filter for a city/state</li>
+  </ul>`;
   }
 }
